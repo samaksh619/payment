@@ -1,0 +1,2 @@
+package com.payflow.payment; import jakarta.persistence.*; import java.math.BigDecimal; import java.time.Instant;
+@Entity @Table(name="payments") public class Payment { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; @Column(unique=true) public String transactionId; public Long senderAccountId; public Long merchantId; public BigDecimal amount; public String currency="INR"; public String status; public Instant createdAt=Instant.now(); public Payment(){} }

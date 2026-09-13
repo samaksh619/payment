@@ -1,0 +1,1 @@
+package com.payflow.account; import org.springframework.data.jpa.repository.*; import java.util.*; public interface AccountRepo extends JpaRepository<Account,Long>{Optional<Account> findByUserId(Long userId);}

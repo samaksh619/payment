@@ -1,0 +1,14 @@
+server:
+  error:
+    include-message: always
+  port: 8081
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/payflow}
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+app:
+  jwtSecret: payflow-demo-secret-change-in-production-123456789

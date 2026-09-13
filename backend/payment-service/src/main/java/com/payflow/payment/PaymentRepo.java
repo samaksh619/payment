@@ -1,0 +1,1 @@
+package com.payflow.payment; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface PaymentRepo extends JpaRepository<Payment,Long>{Optional<Payment> findByTransactionId(String id);}

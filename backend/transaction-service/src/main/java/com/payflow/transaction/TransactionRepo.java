@@ -1,0 +1,1 @@
+package com.payflow.transaction; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface TransactionRepo extends JpaRepository<TransactionRecord,Long>{List<TransactionRecord> findTop50BySenderAccountIdOrderByCreatedAtDesc(Long id);}

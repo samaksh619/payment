@@ -1,0 +1,2 @@
+package com.payflow.account; import jakarta.persistence.*; import java.math.BigDecimal;
+@Entity @Table(name="accounts", uniqueConstraints=@UniqueConstraint(columnNames="userId")) public class Account { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; public Long userId; public BigDecimal balance=BigDecimal.ZERO; public String currency="INR"; @Version public Long version; public Account(){} public Account(Long u,BigDecimal b){userId=u;balance=b;} }

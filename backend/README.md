@@ -1,0 +1,1 @@
+Backend services are independent Spring Boot applications. Start them with Docker Compose from the repository root. For local development, start MySQL/Redis/Kafka first, then run each service with `mvn spring-boot:run`.

@@ -1,0 +1,3 @@
+package com.payflow.auth;
+import org.springframework.boot.*; import org.springframework.boot.autoconfigure.*; import org.springframework.context.annotation.*; import org.springframework.security.crypto.password.PasswordEncoder;
+@SpringBootApplication public class AuthApplication { public static void main(String[] args){SpringApplication.run(AuthApplication.class,args);} @Bean CommandLineRunner seed(UserRepo repo, PasswordEncoder enc){return a->{if(repo.findByEmail("demo@payflow.local").isEmpty()){User u=new User();u.name="Samaksh Kohli";u.email="demo@payflow.local";u.password=enc.encode("Password@123");repo.save(u);}};}}
